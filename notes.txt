@@ -1,0 +1,17 @@
+Personal notes
+I need to setup my file system, which file is which.
+
+Idea vision:
+When I run the command ADD, i will create a new file.
+content should be similar to this example. #I will use dictionary here since it looks more awesome
+{
+    id: ["Something is here],    #I'll use either a number generator or random mix of character generator
+    description: ["This is something I wrote"],
+    status:["This is something that is limited to (to-do, in-progress, done)"],
+    createdAt: ["This will log the entry time"],
+    updatedAt: ["If I updated the file this will change"]
+}
+
+How I want it to be sctructured?
+Fuction folder
+    
