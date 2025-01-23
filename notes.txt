@@ -14,4 +14,6 @@ content should be similar to this example. #I will use dictionary here since it 
 
 How I want it to be sctructured?
 Fuction folder
+
+current issue is the filename is too long which is kinda hassle to delete
     
