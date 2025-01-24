@@ -11,3 +11,4 @@ def taskDelete(filename):
 
 taskDelete(input())
 
+#This somehow works but I need to clean this up.
