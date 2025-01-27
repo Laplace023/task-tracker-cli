@@ -1,7 +1,7 @@
 #this function lists records
 import os
 
-def listTask(status):
+def taskList(status):
     """This function lists the files depending on the status"""
     os.chdir('tasks')
     records = os.listdir()
@@ -25,8 +25,15 @@ def listTask(status):
             tasks.append(st)
         else:
             pass
+    for lst in tasks:
+        print(lst[:-5])
+    
+    os.chdir('../')
     return tasks
 
+if __name__ == "__main__":
+    import sys
+    taskList(str(sys.argv[1]))
 #tasksList = listTask('in-progress')
 
 #for lst in tasksList:

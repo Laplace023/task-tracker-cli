@@ -2,6 +2,7 @@
 from datetime import datetime
 import os 
 import random
+import ast
 
 
 def taskAdd(desc):
@@ -33,8 +34,12 @@ def taskAdd(desc):
     mkfile.close
     
     print(f"file {filename}.txt created")
+    os.chdir('../')
     return task_entry
 
+if __name__ == "__main__":
+    import sys
+    taskAdd(str(sys.argv[1]))
 #Debugging/Testing section
 
 #entry = taskAdd(input())

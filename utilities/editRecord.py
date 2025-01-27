@@ -3,7 +3,7 @@ import os
 import ast
 from datetime import datetime
 
-def editTask(filename, status):
+def taskEdit(filename, status):
     if status in ['to-do', 'in-progress', 'done']:
         os.chdir('tasks')
         task = open(f"{filename}.json", "r") #This is quite challenging
@@ -35,8 +35,11 @@ def editTask(filename, status):
 
         #rename the file
         os.rename(oldFileName, newFileName)
+        os.chdir('../')
 
     else:
         print(f"The status({status}) you entered is invalid, please choose between 'to-do, 'in-progress', done'")
-
+if __name__ == "__main__":
+    import sys
+    taskEdit(str(sys.argv[1]))
 #editTask('ip061', 'done')

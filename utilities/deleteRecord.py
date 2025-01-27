@@ -7,8 +7,11 @@ def taskDelete(filename):
     toDelete = filename + '.json'
     os.remove(toDelete)
     print(f"task with ID:{filename} is now deleted")
+    os.chdir('../')
 
-
+if __name__ == "__main__":
+    import sys
+    taskDelete(str(sys.argv[1]))
 #taskDelete(input())
 
 #This somehow works but I need to clean this up.
