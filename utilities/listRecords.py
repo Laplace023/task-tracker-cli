@@ -27,7 +27,7 @@ def listTask(status):
             pass
     return tasks
 
-tasksList = listTask('in-progress')
+#tasksList = listTask('in-progress')
 
-for lst in tasksList:
-    print(lst[:-5])
+#for lst in tasksList:
+#    print(lst[:-5])
