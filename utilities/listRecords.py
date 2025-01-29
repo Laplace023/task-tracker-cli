@@ -6,7 +6,7 @@ def taskList(status):
     os.chdir('tasks')
     records = os.listdir()
     
-    print(records) #this is a debug code
+    #print(records) #this is a debug code
     #preparing the code to fetch the files
     if status == 'to-do':
         stat = "td"

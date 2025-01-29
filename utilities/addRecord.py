@@ -33,7 +33,7 @@ def taskAdd(desc):
     mkfile.write(task_data)
     mkfile.close
     
-    print(f"file {filename}.txt created")
+    print(f"file {filename}.json created")
     os.chdir('../')
     return task_entry
 
