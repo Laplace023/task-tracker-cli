@@ -5,3 +5,6 @@ utilities/__pycache__/deleteRecord.cpython-313.pyc
 utilities/__pycache__/editRecord.cpython-313.pyc
 utilities/__pycache__/listRecords.cpython-313.pyc
 utilities/__pycache__/updateRecord.cpython-313.pyc
+test.py
+notes.txt
+instructions.txt
