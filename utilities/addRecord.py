@@ -8,6 +8,9 @@ import ast
 def taskAdd(desc):
     """function to add an entry"""
     #prepare the directory
+    homedir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(homedir)
+    os.chdir('../')
     os.chdir('tasks')
     #calling datetime to set the current date
     time_now = datetime.now()

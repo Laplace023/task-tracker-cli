@@ -3,6 +3,9 @@ import os
 
 def taskDelete(filename):
     """Function to delete the tasks"""
+    homedir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(homedir)
+    os.chdir('../')
     os.chdir('tasks')
     toDelete = filename + '.json'
     os.remove(toDelete)

@@ -5,6 +5,9 @@ from datetime import datetime
 
 def taskEdit(filename, status):
     if status in ['to-do', 'in-progress', 'done']:
+        homedir = os.path.dirname(os.path.abspath(__file__))
+        os.chdir(homedir)
+        os.chdir('../')
         os.chdir('tasks')
         task = open(f"{filename}.json", "r") #This is quite challenging
         oldFileName = f"{filename}.json"
