@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #hope I can pull this off
 #These are my awesome modules
 from utilities.addRecord import taskAdd as tAdd
@@ -9,7 +11,14 @@ from utilities.updateRecord import updateTask as tUpdate
 import argparse
 import os
 
-pars = argparse.ArgumentParser()
+pars = argparse.ArgumentParser(
+    description='''Welcome to task-cli, here are some sample commands
+    task-cli --add "your entry here", this will create a new entry \n
+    task-cli --list, this will list all task, but you can filter by adding more args \n
+    task-cli --delete <filename>, this will delete the task with specified ID \n
+    and so on...
+    '''
+)
 
 pars.add_argument("--add", help="add a new entry", action="store_true")
 pars.add_argument("inp1", help="content of the call",nargs='?', default="test")

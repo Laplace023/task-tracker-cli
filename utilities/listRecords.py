@@ -1,8 +1,12 @@
 #this function lists records
 import os
+import ast
 
 def taskList(status):
     """This function lists the files depending on the status"""
+    homedir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(homedir)
+    os.chdir('../')
     os.chdir('tasks')
     records = os.listdir()
     
@@ -26,7 +30,12 @@ def taskList(status):
         else:
             pass
     for lst in tasks:
-        print(lst[:-5])
+        x = open(lst)
+        item = x.read()
+        itemdict = ast.literal_eval(item)
+        name = lst[:-5]
+        description = itemdict['Description']
+        print(f"{name}:{description}")
     
     os.chdir('../')
     return tasks

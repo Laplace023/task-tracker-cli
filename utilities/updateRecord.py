@@ -3,6 +3,9 @@ import ast
 from datetime import datetime
 
 def updateTask(filename, description):
+    homedir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(homedir)
+    os.chdir('../')
     os.chdir('tasks')
     #pull up the file
     task = open(f'{filename}.json', 'r')
