@@ -11,6 +11,11 @@ from utilities.updateRecord import updateTask as tUpdate
 import argparse
 import os
 
+try:
+    os.mkdir('tasks')
+except:
+    pass
+
 pars = argparse.ArgumentParser(
     description='''Welcome to task-cli, here are some sample commands
     task-cli --add "your entry here", this will create a new entry \n
