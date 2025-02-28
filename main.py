@@ -11,6 +11,9 @@ from utilities.updateRecord import updateTask as tUpdate
 import argparse
 import os
 
+homedir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(homedir)
+
 try:
     os.mkdir('tasks')
 except:
